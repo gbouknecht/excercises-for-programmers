@@ -5,7 +5,7 @@
   (let [parse #(if (re-matches validation-re %1) (BigDecimal. ^String %1))]
     (loop []
       (do
-        (print question " ") (flush)
+        (print (format "%s " question)) (flush)
         (or
           (parse (read-line))
           (do (println validation-message) (recur)))))))
