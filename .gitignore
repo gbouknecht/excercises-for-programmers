@@ -6,5 +6,6 @@
 .nrepl-port
 classes/
 lib/
+log/
 tags
 target/
