@@ -1,6 +1,6 @@
 (ns currency-conversion.core
   (:require [clojure.string :refer [trim]])
-  (:require [currency-conversion.exchange-rates-client :refer [get-currencies get-rates]])
+  (:require [currency-conversion.exchange-rates-client :refer [get-currencies get-exchange-rates]])
   (:require [currency-conversion.open-exchange-rates-client :refer [->OpenExchangeRatesClient]])
   (:import (java.io File)))
 
@@ -13,4 +13,4 @@
 (defn -main []
   (let [client (->OpenExchangeRatesClient app-id)]
     (println (format "Returned currencies: %s" (get-currencies client)))
-    (println (format "Returned rates: %s" (get-rates client "USD" ["EUR", "JPY", "GBP"])))))
+    (println (format "Returned rates: %s" (get-exchange-rates client "USD" ["EUR", "JPY", "GBP"])))))

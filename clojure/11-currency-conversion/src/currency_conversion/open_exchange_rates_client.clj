@@ -21,5 +21,5 @@
   ExchangeRatesClient
   (get-currencies [_]
     (do-get "currencies.json" nil))
-  (get-rates [_ base-currency-code currency-codes]
+  (get-exchange-rates [_ base-currency-code currency-codes]
     (get (do-get "latest.json" {:app_id app-id :base base-currency-code :symbols (join "," currency-codes)}) "rates")))
