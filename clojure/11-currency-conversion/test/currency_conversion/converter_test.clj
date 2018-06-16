@@ -27,9 +27,9 @@
       100 "AED" nil "USD"
       100 "EUR" nil "AED"
       100 "AED" nil "EUR"
+      100 "AED" 100 "AED"
       100 "USD" 100 "USD"
       100 "EUR" 100 "EUR"
-      100 "AED" 100 "AED"
       100 "USD" (* 100 0.9) "EUR"
       100 "EUR" (/ 100 0.9) "USD"
       100 "EUR" (* 100 (/ 89.3 0.9)) "JPY")))
