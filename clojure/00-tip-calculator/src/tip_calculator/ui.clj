@@ -10,7 +10,7 @@
           (parse (read-line))
           (do (println validation-message) (recur)))))))
 
-(defn- bill-amount [] (ask-and-parse "What is the bill amount?" #"^\d+(.\d+)?$" "Enter a valid amount!"))
+(defn- bill-amount [] (ask-and-parse "What is the bill amount?" #"^\d+(\.\d+)?$" "Enter a valid amount!"))
 (defn- tip-rate [] (ask-and-parse "What is the tip rate?" #"^\d+$" "Enter a valid rate!"))
 
 (defn ask-and-calculate []

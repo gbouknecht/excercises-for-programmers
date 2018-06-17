@@ -9,7 +9,7 @@
   (print (format "Enter the price of item %d: " item-number)) (flush)
   (let [input (read-line)]
     (if (not (blank? input))
-      (let [price (parse #"^\d+(.\d+)?$" input)]
+      (let [price (parse #"^\d+(\.\d+)?$" input)]
         (or price (recur item-number))))))
 
 (defn- ask-quantity [item-number]
